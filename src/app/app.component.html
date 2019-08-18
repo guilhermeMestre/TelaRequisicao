@@ -1,21 +1,396 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
-</div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/cli">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
+<app-header></app-header>
+<app-menu></app-menu>
+<div class="content-wrapper">
+  <!--
+  <section class="content-header">
+    <ol class="breadcrumb">
+      <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+      <li class="active">Dashboard</li>
+    </ol>
+  </section>
+-->
 
-<router-outlet></router-outlet>
+  <!-- Main content -->
+  <section class="content">
+      <h3>SECRETARIA FATEC ZONA LESTE</h3>
+  
+  
+      <form action="script.php" method="post">
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="inputEmail4">RA/RG:</label>
+            <input type="text" class="form-control" id="inputRa" placeholder="4353453">
+          </div>
+          <div class="form-group col-md-4">
+            <label for="inputCurso">Curso:</label>
+            <select id="inputCurso" class="form-control">
+              <option selected>Choose...</option>
+              <option>ADS</option>
+              <option>COMEX</option>
+            </select>
+          </div>
+
+          <div class="form-group col-md-6">
+            <label for="inputTelefone">Telefone</label>
+            <input type="text" class="form-control" id="inputTelefone" placeholder="1234 ">
+          </div>
+          <div class="form-group col-md-4">
+            <label for="inputPeriodo">Periodo:</label>
+            <select id="inputPeriodo" class="form-control">
+              <option selected>Choose...</option>
+              <option>Manhã</option>
+              <option>Tarde</option>
+              <option>Noite</option>
+            </select>
+          </div>
+        </div>
+
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label for="inputData">Data:</label>
+              <input type="date" class="form-control" id="inputData">
+            </div>
+            <div class="form-group col-md-4">
+              <label for="inputNome">Nome:</label>
+              <input type="text" class="form-control" id="inputNome">
+            </div>
+            
+          </div>
+          
+          <div class="form-row">
+              <div class="form-group col-md-6">
+                  <label for="inputEmail">E-mail</label>
+                  <input type="text" class="form-control" id="inputEmail">
+                </div>
+          <div class="form-group col-md-4">
+            <label for="inputData">Data da retirada Prevista:</label>
+            <input type="date" class="form-control" id="inputData">
+          </div>
+          </div>
+
+          <div class="form-group col-md-6">
+              <div class="col-sm-10">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="gridCheck1">
+                  <label class="form-check-label" for="gridCheck1">
+                    Concordo com os termos informados.
+                  </label>
+                </div>
+              </div>
+            </div>
+    
+
+          <div class="form-row">
+          <div class="form-group col-md-8">
+              <button type="submit" class="btn btn-primary">Enviar Solicitação</button>
+          </div>
+          <br>
+          <br>
+          </div>
+          </form>
+
+          <form> 
+
+            <div class="form-group row">   
+            <strong><p>Selecione o(os) DOCUMENTOS </p></strong>
+                      
+            <table class="table" border=1 cellspacing=0 cellpadding=2 bordercolor="666633">
+              <thead class="thead-dark">
+                <tr>
+                  <th scope="col">Selecione</th>
+                  <th scope="col">Quantidade</th>
+                  <th scope="col">Documento</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                <td>
+                    <div class="form-group col-md-6">
+                        <div class="col-sm-10">
+                          <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="gridCheck2">
+                          </div>
+                        </div>
+                      </div>
+                </td>
+
+                <td>
+                    <div class="form-group col-md-4">
+                        <label for="inputQtd">Qtd:</label>
+                        <select id="inputQtd" class="form-control">
+                          <option selected>Choose...</option>
+                          <option>1</option>
+                          <option>2</option>
+                          <option>3</option>
+                        </select>
+                      </div>
+                </td>
+
+                <td>
+                  Atestado de conclução
+                </td>
+                </tr>
+
+                <tr>
+                <td>
+                    <div class="form-group col-md-6">
+                        <div class="col-sm-10">
+                          <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="gridCheck2">
+                          </div>
+                        </div>
+                      </div>
+                </td>
+
+                <td>
+                    <div class="form-group col-md-4">
+                        <label for="inputQtd">Qtd:</label>
+                        <select id="inputQtd" class="form-control">
+                          <option selected>Choose...</option>
+                          <option>1</option>
+                          <option>2</option>
+                          <option>3</option>
+                        </select>
+                      </div>
+                </td>
+
+                <td>
+                  Histórico escolar
+                </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <div class="form-group col-md-6">
+                            <div class="col-sm-10">
+                              <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="gridCheck2">
+                              </div>
+                            </div>
+                          </div>
+                    </td>
+    
+                    <td>
+                        <div class="form-group col-md-4">
+                            <label for="inputQtd">Qtd:</label>
+                            <select id="inputQtd" class="form-control">
+                              <option selected>Choose...</option>
+                              <option>1</option>
+                              <option>2</option>
+                              <option>3</option>
+                            </select>
+                          </div>
+                    </td>
+    
+                    <td>
+                      Programa de disciplinas
+                    </td>
+                    </tr>
+
+                    <tr>
+                    <td>
+                        <div class="form-group col-md-6">
+                            <div class="col-sm-10">
+                              <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="gridCheck2">
+                              </div>
+                            </div>
+                          </div>
+                    </td>
+    
+                    <td>
+                        <div class="form-group col-md-4">
+                            <label for="inputQtd">Qtd:</label>
+                            <select id="inputQtd" class="form-control">
+                              <option selected>Choose...</option>
+                              <option>1</option>
+                              <option>2</option>
+                              <option>3</option>
+                            </select>
+                          </div>
+                    </td>
+    
+                    <td>
+                      Atestado de matricula
+                    </td>
+                    </tr>
+              </tbody>
+            </table>
+            </div>     
+
+            <div class="form-group row">
+            <br>
+            <br>
+              <strong>
+                  <p>Informativo/Regras:</p>
+                </strong>
+            <table class="table">
+              <thead class="thead-dark">
+                <tr>
+                  <th scope="col">Item</th>
+                  <th scope="col">Descrição</th>
+                </tr>
+              </thead>
+
+              <tbody>
+              <tr>
+                <td>1</td>
+                <td>O aluno(a) ou ex-aluno(a) só poderá fazer 5 requisições de cada documento por semestre</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                  <td>Documento tem validade de 60 dias para retirada, documentos não retirados serão automaticamente
+                cancelados</td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>É obrigatório a apresentação de documento com identificação</td>
+              </tr>
+            <tr>
+              <td>4</td>
+              <td>Terceiros deverão obrigatóriamente apresentar procuração simples de autorização para retirada de
+                documentos</td>
+            </tr>
+            <tr>
+              <td>5</td>
+              <td>Um email de confirmação será enviado para o email informado no formulario quando a solicitação for
+                recebida</td>
+            </tr>
+            <tr>
+              <td>6</td>
+              <td>Um email será enviado para o email informado no formulario quando o documento(s) requisato estiver
+                pronto</td>
+            </tr>
+              </tbody>
+          </table>
+          </div>
+
+          <div class="form-group row">
+          <strong>
+            <p>PRAZOS PARA ENTREGA DE DOCUMENTOS</p>
+          </strong>
+          <table class="table">
+            <thead>
+            <tr>
+              <th>DOCUMENTO</th>
+              <th>PRAZO (DIAS ÚTEIS)</th>
+              <th>Descrição</th>
+            </tr>
+            <tr>
+              <td>Atestado de Matrícula</td>
+              <td>3</td>
+              <td>Descrição Atestado de Matrícula</td>
+            </tr>
+            <tr>
+              <td>Atestado de Matrícula com disciplina e freqüência</td>
+              <td>3</td>
+              <td>Descriççao Atestado de Matrícula com disciplina e freqüência</td>
+            </tr>
+            <tr>
+              <td>Carteira de Identidade Estudantil – 2ª via</td>
+              <td>4</td>
+              <td>Descrição Carteira de Identidade Estudantil – 2ª via</td>
+            </tr>
+            <tr>
+              <td>Conteúdo Programático de disciplinas</td>
+              <td>5</td>
+              <td>Descrição Conteúdo Programático de disciplinas</td>
+            </tr>
+            <tr>
+              <td>Declarações em geral para ex-alunos</td>
+              <td>3</td>
+              <td>Descrição Declarações em geral para ex-alunos</td>
+            </tr>
+            <tr>
+              <td>Histórico Escolar para Transferência</td>
+              <td>5</td>
+              <td>Descrição Histórico Escolar para Transferência</td>
+            </tr>
+            <tr>
+              <td>Histórico Escolar para aluno</td>
+              <td>5</td>
+              <td>Descrição Histórico Escolar para aluno</td>
+            </tr>
+            <tr>
+              <td>Histórico Escolar para ex-aluno</td>
+              <td>5</td>
+              <td>Descrição Histórico Escolar para ex-aluno</td>
+            </tr>
+            <tr>
+              <td>Ofícios e Cartas de Apresentação</td>
+              <td>5</td>
+              <td>Descrição Ofícios e Cartas de Apresentação</td>
+            </tr>
+            <tr>
+              <td>Outros</td>
+              <td>10</td>
+              <td>Documentos fora do padrão</td>
+            </tr>
+           </thead>
+          </table>
+          </div>
+  
+  
+  
+          <div class="form-group row">
+          <strong>
+            <p>HORÁRIO DE ATENDIMENTO DA SECRETARIA</p>
+          </strong>
+          <table class="table">
+            <thead>
+            <tr>
+              <th>Periodo</th>
+              <th>Horario</th>
+            </tr>
+            <tr>
+              <td>Manhã</td>
+              <td>09h às 12h</td>
+            </tr>
+            <tr>
+              <td>Tarde</td>
+              <td>15h30 às 17h30</td>
+            </tr>
+            <tr>
+              <td>Noite</td>
+              <td>18h30 às 20h30</td>
+            </tr>
+            </thead>
+          </table>
+
+          <div class="form-group row">
+          <strong>
+            <p>FUNCIONÁRIOS</p>
+          </strong>
+          </div>
+
+          <table class="table">
+            <thead>
+            <tr>
+              <th>Nome</th>
+              <th>Cargo</th>
+            </tr>
+            <tr>
+              <td>Camila Miranda</td>
+              <td>Diretora Acadêmica</td>
+            </tr>
+            <tr>
+              <td>Vera Lúcia</td>
+              <td>Assistente</td>
+            </tr>
+            <tr>
+              <td>Aline</td>
+              <td>Auxiliar Administrativo</td>
+            </tr>
+            <tr>
+              <td>Tatiane</td>
+              <td>Auxiliar Administrativo</td>
+            </tr>
+          </thead>
+          </table>
+          </div>
+
+      </form>
+
+  </section>
+<app-settings></app-settings>
+<app-footer></app-footer>
